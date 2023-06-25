@@ -1,0 +1,123 @@
+<section class="container">
+  <br />
+  <img src="../img/img.png" alt="" width="100%" />
+</section>
+
+<section class="2">
+  <div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <center>
+          <h2>Sản phẩm mới nhất:</h2>
+        </center>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+</section>
+<br />
+<section class="3">
+  <div class="container">
+    <!-- muon tren cung 1 dong dung row
+                tong cua 1 row =12 -->
+    <div class="row">
+      <div class="col-lg-3 col-md-6" ng-repeat="sp in listsp">
+        <div>
+          <div class="card" style="width: 16rem" ng-click="detailSP($index)">
+            <div class="sticker">Hàng mới</div>
+            <a href="#sp1/{{sp.id}}">
+              <center>
+                <img src="../img/{{sp.anh}}" class="anh" />
+              </center>
+            </a>
+            <div class="card-body">
+              <span class="card-title">{{sp.ten}}</span>
+              <span>({{sp.hang}})</span>
+              <span class="giacu">${{sp.giacu}}</span>
+              <span class="giamoi">${{sp.giamoi}}</span>
+              <br />
+              <center>
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  ng-click="clickgiohang($event,$index)"
+                >
+                  Thêm vào giỏ hàng
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  ng-click="muahang($event,$index)"
+                >
+                  Mua hàng
+                </button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<br />
+<!-- SP ban chay -->
+<section class="2">
+  <div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <center>
+          <h2>Sản phẩm bán chạy:</h2>
+        </center>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+</section>
+<section class="3">
+  <div class="container">
+    <!-- muon tren cung 1 dong dung row
+                tong cua 1 row =12 -->
+    <div class="row">
+      <div class="col-lg-3 col-md-6" ng-repeat="sp in listsp">
+        <div>
+          <div class="card" style="width: 16rem">
+            <div class="sticker">Hàng mới</div>
+            <a href="#sp1/{{sp.id}}" ng-click="detailSP($index)">
+              <center>
+                <img src="../img/{{sp.anh}}" class="anh" />
+              </center>
+            </a>
+            <div class="card-body">
+              <span class="card-title">{{sp.ten}}</span>
+              <span>({{sp.hang}})</span>
+              <span class="giacu">${{sp.giacu}}</span>
+              <span class="giamoi">${{sp.giamoi}}</span>
+              <br />
+              <center>
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  ng-click="clickgiohang($event,$index)"
+                >
+                  Thêm vào giỏ hàng
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  ng-click="muahang($event,$index)"
+                >
+                  Mua hàng
+                </button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<br />

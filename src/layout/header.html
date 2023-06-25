@@ -1,0 +1,93 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid row">
+      <div class="col-2">
+        <a class="navbar-brand" href="#home">
+          <img
+            src="../img/logo.png"
+            alt="Logo"
+            width="100"
+            height="auto"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+      </div>
+      <div class="col-6">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+      <!-- thong bao -->
+      <div class="col-4">
+        <div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#dangky" style="width: 116px"
+                >Đăng ký</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dangnhap" style="width: 116px"
+                >Đăng nhập</a
+              >
+            </li>
+            <a href="#giohang">
+              <img src="../img/icon1.png" class="icon1" />
+              <span class="badge text-bg-danger">{{listgiohang.length}}</span>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- menu duoi -->
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid row" id="chumenu">
+      <div class="col-8">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="home"
+                aria-current="page"
+                href="#home"
+                style="width: 116px"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gioithieu" style="width: 116px"
+                >Giới thiệu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sp" style="width: 116px">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sukien" style="width: 116px"
+                >Sự kiện</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#taikhoan" style="width: 116px"
+                >Tài khoản</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- thong bao -->
+      <div class="col-3"></div>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,48 @@
+<section class="container">
+  <br />
+  <center>
+    <h2>Giỏ hàng</h2>
+  </center>
+  <br />
+  <div
+    class="card mb-3"
+    style="max-width: 1200px"
+    ng-repeat="sp in listgiohang"
+  >
+    <center>
+      <div class="row g-0">
+        <div class="col-md-3">
+          <img src="../img/{{sp.anh}}" width="100px" />
+        </div>
+        <div class="col-md-9">
+          <div class="card-body">
+            <h5 class="card-title">Sản phẩm: {{$index +1}}</h5>
+            <span class="card-title">Tên sản phẩm: {{sp.ten}}</span>
+            <br />
+            <span class="card-title">Hãng: {{sp.hang}}</span>
+            <br />
+            <span class="giacu">Giá niêm yết: ${{sp.giacu}}</span>
+            <span class="card-title"> | Giá khuyến mại: ${{sp.giamoi}}</span>
+            <br />
+            <button
+              type="button"
+              class="btn btn-outline-success"
+              ng-click="cleargh($event,$index)"
+            >
+              Xóa khỏi giỏ hàng
+            </button>
+          </div>
+        </div>
+      </div>
+    </center>
+  </div>
+  <button
+    type="button"
+    class="btn btn-outline-success"
+    ng-click="muagiohang($event)"
+  >
+    Mua hàng
+  </button>
+  <br />
+  <br />
+</section>

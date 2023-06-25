@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+  </head>
+  <link rel="stylesheet" href="../css/plugin/bootstrap.css" />
+  <link rel="stylesheet" href="../css/custom/BTVN.css" />
+
+  <body class="a" ng-app="myApp">
+    <header ng-include="'layout/header.html'"></header>
+    <section ng-view></section>
+    <footer ng-include="'layout/footer.html'"></footer>
+    <script src="../lib/angular.js"></script>
+    <script src="../lib/angular-route.js"></script>
+    <script src="../js/plugin/bootstrap.js"></script>
+    <script src="./controller/sanpham.js"></script>
+    <script src="./config/api.js"></script>
+    <script src="./controller/laytt.js"></script>
+    <script src="./controller/taikhoan.js"></script>
+    <script src="route.js"></script>
+  </body>
+</html>

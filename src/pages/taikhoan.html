@@ -1,0 +1,163 @@
+<section class="container">
+  <div class="row">
+    <div class="col-5">
+      <form class="dangky">
+        <center>
+          <h3>Quản lý sản phẩm</h3>
+        </center>
+        <div class="mb-3">
+          <label class="form-label">ID</label>
+          <input type="text" class="form-control" ng-model="form.id" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tên</label>
+          <input type="text" class="form-control" ng-model="form.ten" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Hãng</label>
+          <input type="text" class="form-control" ng-model="form.hang" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Giá cũ</label>
+          <input type="text" class="form-control" ng-model="form.giacu" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Giá mới</label>
+          <input type="text" class="form-control" ng-model="form.giamoi" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ảnh</label>
+          <input type="text" class="form-control" ng-model="form.anh" />
+        </div>
+        <!-- <input
+            type="file"
+            class="form-control"
+            accept=".jpg, .png"
+            ng-model="form.anh"
+            ng-file="form.anh"
+            multiple
+          />
+        </div> -->
+        <span>Loai:</span>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Chọn loại</option>
+          <option
+            ng-repeat="loai in listloai"
+            value="{{loai.id}}"
+            ng-model="form.loai"
+            ng-selected="form.loai === '{{loai.id}}'"
+          >
+            {{loai.ten}}
+          </option>
+        </select>
+        <br />
+        <button type="button" class="btn btn-success" ng-click="them($event)">
+          Thêm sản phẩm
+        </button>
+        <button type="button" class="btn btn-success" ng-click="sua($event)">
+          Sửa sản phẩm
+        </button>
+      </form>
+    </div>
+    <div class="col-7">
+      <div class="dangky">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Tên</th>
+              <th scope="col">Hãng</th>
+              <th scope="col">Loại</th>
+              <th scope="col">Ảnh</th>
+              <th scope="col">Giá cũ</th>
+              <th scope="col">Giá mới</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="sp in listsp">
+              <th scope="row">{{sp.id}}</th>
+              <th>{{sp.ten}}</th>
+              <th>{{sp.hang}}</th>
+              <th>{{sp.loai}}</th>
+              <th>{{sp.anh}}</th>
+              <th>{{sp.giacu}}</th>
+              <th>{{sp.giamoi}}</th>
+              <th>
+                <a href="#detail/{{sp.id}}" ng-click="chitiet($event,$index)"
+                  >Chi tiết</a
+                >
+                <a href="#delete/{{sp.id}}" ng-click="xoa($event,$index)"
+                  >Xóa</a
+                >
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container">
+  <div class="row">
+    <div class="col-5">
+      <form class="dangky">
+        <center>
+          <h3>Quản lý loại</h3>
+        </center>
+        <div class="mb-3">
+          <label class="form-label">ID</label>
+          <input type="text" class="form-control" ng-model="formloai.id" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tên</label>
+          <input type="text" class="form-control" ng-model="formloai.ten" />
+        </div>
+        <br />
+        <button
+          type="button"
+          class="btn btn-success"
+          ng-click="themloai($event)"
+        >
+          Thêm loại
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          ng-click="sualoai($event)"
+        >
+          Sửa loại
+        </button>
+      </form>
+    </div>
+    <div class="col-7">
+      <div class="dangky">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Tên</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="sp in listloai">
+              <th scope="row">{{sp.id}}</th>
+              <th>{{sp.ten}}</th>
+              <th>
+                <a
+                  href="#detailloai/{{sp.id}}"
+                  ng-click="chitietloai($event,$index)"
+                  >Chi tiết</a
+                >
+                <a
+                  href="#deleteloai/{{sp.id}}"
+                  ng-click="xoaloai($event,$index)"
+                  >Xóa</a
+                >
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
